@@ -153,14 +153,8 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'MangoDesk Meeting Summarizer API is running' });
 });
 
-// Serve static files in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'frontend/build')));
-  
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
-  });
-}
+// ...existing code...
+// Static file serving removed for backend-only deployment
 
 // Error handling middleware
 app.use((error, req, res, next) => {
