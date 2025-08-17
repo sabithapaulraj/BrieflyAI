@@ -1,0 +1,103 @@
+/* Additional App-specific styles */
+.container {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section {
+  transition: transform 0.2s ease-in-out;
+}
+
+.section:hover {
+  transform: translateY(-2px);
+}
+
+.form-group textarea {
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+}
+
+.button {
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.recipients-input {
+  background-color: white;
+}
+
+.recipient-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 500;
+}
+
+.recipient-tag button {
+  color: white;
+  font-weight: bold;
+}
+
+.recipient-tag button:hover {
+  color: #ff6b6b;
+}
+
+.status {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading-spinner {
+  vertical-align: middle;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .header h1 {
+    font-size: 2em;
+  }
+  
+  .section {
+    padding: 15px;
+  }
+  
+  .recipients-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .recipients-input input {
+    min-width: auto;
+    margin-top: 10px;
+  }
+}
